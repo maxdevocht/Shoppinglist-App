@@ -12,6 +12,12 @@
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -19,14 +25,38 @@ html, body {
     background-color: #EEF0F4;
 }
 
+/* container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 2.5rem;
+}
+
 input {
     color: #432000;
     background-color: var(--color-white-off);
     border: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+input::placeholder {
+    opacity: 0.5;
 }
 
 button {
     color: #FDFDFD;
     background-color: var(--color-red);
     border: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
 }
