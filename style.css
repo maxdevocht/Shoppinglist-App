@@ -3,6 +3,7 @@
 :root {
     --color-white: #EEF0F4;
     --color-white-off: #DCE1EB;
+    --color-creme: #FFFDF8;
     --color-red: #AC485A;
 }
 
@@ -16,6 +17,10 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+li {
+    list-style: none;
 }
 
 html, body {
@@ -63,4 +68,20 @@ button {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     cursor: pointer;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+ul li {
+    background-color: #FFFDF8;
+    padding: 15px;
+    border-radius: .5rem;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
