@@ -33,7 +33,7 @@ html, body {
     justify-content: center;
     gap: 1rem;
     max-width: 320px;
-    margin: 30px auto;
+    margin: 30px;
 }
 
 input {
