@@ -100,3 +100,14 @@ function appendItemToShoppingListEl(item) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
