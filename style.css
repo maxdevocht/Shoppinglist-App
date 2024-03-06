@@ -6,7 +6,6 @@
     --color-creme: #FFFDF8;
     --color-red: #AC485A;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -39,16 +38,13 @@ html, body {
     max-width: 320px;
     margin: 30px;
 }
-
 .logo {
     width: 100%;
 }
-
 .logo i {
     color: var(--color-red);
     font-size: 1.5rem;
 }
-
 input {
     color: #432000;
     background-color: var(--color-white-off);
@@ -61,11 +57,9 @@ input {
     text-align: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 input::placeholder {
     opacity: 0.5;
 }
-
 button {
     color: #FDFDFD;
     background-color: var(--color-red);
@@ -80,18 +74,15 @@ button {
     transition: all .1s ease-in-out;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 button:hover {
     background-color: #832536;
 }
-
 ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     padding: 0;
 }
-
 ul li {
     background-color: #FFFDF8;
     padding: 15px;
@@ -102,7 +93,6 @@ ul li {
     transition: all .1s ease-in-out;
     cursor: pointer;
 }
-
 ul li:hover {
     background-color: #dbd6cb;
 }
