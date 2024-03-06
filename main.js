@@ -20,7 +20,7 @@ addBtn.addEventListener("click", function() {
 })
 
 onValue(shoppingListInDB, function(snapshot) {
-    let itemsArray = Object.values(snapshot.val())
+    let itemsArray = Object.entries(snapshot.val())
     clearShoppingListEl()
     for (let i = 0; i < itemsArray.length; i++) {
         let currentItem = itemsArray[i]
@@ -37,7 +37,6 @@ function clearShoppingListEl() {
 
 function clearInputFieldEl() {
     inputFieldEl.value = ""
-    
 }
 
 function appendListItem(itemValue) {
