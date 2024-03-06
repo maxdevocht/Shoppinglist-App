@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL: "https://playground-8e380-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -42,12 +42,16 @@ function clearInputFieldEl() {
 }
 
 function appendItemToShoppingListEl(item) {
-    // shoppingListEl.innerHTML += `<li>${itemValue}</li>`
     let itemID = item[0]
     let itemValue = item[1]
     let newEl = document.createElement("li")
-    // Challenge: Make it so the item name shows instead of 'Something'
     newEl.textContent = itemValue
+
+    newEl.addEventListener("click", function() {
+        let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
+        remove(exactLocationOfItemInDB)
+    })
+
     shoppingListEl.append(newEl)
 }
 
