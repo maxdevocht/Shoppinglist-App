@@ -10,10 +10,10 @@ const database = getDatabase(app)
 const shoppingListInDB = ref(database, "shoppingList")
 
 const inputFieldEl = document.getElementById("input-field")
-const addBtn = document.getElementById("add-btn")
-const shoppingListEl = document.getElementById("shopping-list");
+const addButtonEl = document.getElementById("add-button")
+const shoppingListEl = document.getElementById("shopping-list")
 
-addBtn.addEventListener("click", function() {
+addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     push(shoppingListInDB, inputValue)
     clearInputFieldEl()
@@ -21,13 +21,15 @@ addBtn.addEventListener("click", function() {
 
 onValue(shoppingListInDB, function(snapshot) {
     let itemsArray = Object.entries(snapshot.val())
+    
     clearShoppingListEl()
+    
     for (let i = 0; i < itemsArray.length; i++) {
         let currentItem = itemsArray[i]
         let currentItemID = currentItem[0]
         let currentItemValue = currentItem[1]
         
-        appendItemToShoppingListEl(currentItemValue)
+        appendItemToShoppingListEl(currentItem)
     }
 })
 
@@ -39,7 +41,13 @@ function clearInputFieldEl() {
     inputFieldEl.value = ""
 }
 
-function appendListItem(itemValue) {
-    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+function appendItemToShoppingListEl(item) {
+    // shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+    let itemID = item[0]
+    let itemValue = item[1]
+    let newEl = document.createElement("li")
+    // Challenge: Make it so the item name shows instead of 'Something'
+    newEl.textContent = itemValue
+    shoppingListEl.append(newEl)
 }
 
