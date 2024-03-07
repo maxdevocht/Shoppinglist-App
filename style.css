@@ -26,6 +26,9 @@ html, body {
     background-color: #EEF0F4;
     color: #432000;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
