@@ -37,13 +37,6 @@ html, body {
     max-width: 320px;
     margin: 30px;
 }
-.logo {
-    width: 100%;
-}
-.logo i {
-    color: var(--color-red);
-    font-size: 1.5rem;
-}
 input {
     color: #432000;
     background-color: var(--color-white-off);
